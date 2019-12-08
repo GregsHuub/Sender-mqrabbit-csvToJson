@@ -24,14 +24,13 @@ dependencies {
 
 }
 jar {
-//    manifest
-//            {
-//                attributes(
-//                        'Main-Class':
-//                )
-//            }
-//}
-//for fatjar
+    manifest
+            {
+                attributes(
+                        'Main-Class': 'SendJar'
+//                        'Main-Class': 'RecvJar'
+                )
+            }
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }

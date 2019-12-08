@@ -9,6 +9,7 @@ public class ApplicationRecv {
     public static void main(String[] args) {
 
         LOGGER.info("Start receiving message from MqRabbit...");
+        LOGGER.info("To stop receiving messages press CTRL + C");
         RecvQueue recvQueue = new RecvQueue();
 //        recvQueue.receivingQueueTest(QUEUE_NAME, HOST);
         recvQueue.receiving(ROUTING_KEY, HOST, false);
